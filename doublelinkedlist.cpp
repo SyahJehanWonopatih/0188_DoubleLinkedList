@@ -38,6 +38,19 @@ public:
             if (START != NULL)  //jika list tidak kosong maka node pertama menunjuk ke node baru
                 START->prev = newNode;  
 
+            newNode->prev = NULL;  //node baru tidak memiliki node sebelumnya
+            START = newNode; 
+            return; 
+        }
        
-   
+    }
+    
+
 };
+
+
+
+
+int main() {
+
+}
