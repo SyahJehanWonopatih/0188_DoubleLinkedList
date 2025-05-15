@@ -69,10 +69,14 @@ public:
         while(current != NULL && current->noMhs != rollno) //membuat pointer untuk mencari Node yang akan dihapus
             current = current->next;
 
+        if (current == NULL) {  //jika tidak ditemukan maka akan menampillkan pesan record not found!
+            cout << "Record not found!" << endl;
+            return;
+        }
        
     }
 
-  
+    
 };
 
 
