@@ -56,10 +56,14 @@ public:
     }
     
     void hapus() {  //membuat fungsi untuk menghapus Node
-       
+        if(START == NULL) { //jika list kosong maka tidak bisa dihapus
+            cout << "\nList is empty!" << endl;
+            return;
+        }
+        
     }
 
-   
+    
 };
 
 
