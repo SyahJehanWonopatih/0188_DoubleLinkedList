@@ -88,12 +88,20 @@ public:
         cout << "\nRecord with roll number " << rollno << " deleted!" << endl;
     }
 
-    void traverse() {   //membuat fungsi untuk menampilkan isi dari list
-        if(START == NULL) { //membuat fungsi agar jika list kosong maka tidak bisa ditampilkan
+    void traverse() {
+        if(START == NULL) {
             cout << "\nList is empty!" << endl;
             return;
         }
-       
+        Node *currentNode = START;
+
+        cout << "\nRecords in ascending order of roll number are:\n ";
+        int i = 0;
+        while(currentNode != NULL) {    //membuat fungsi agar data dari awal sampai akhir ditampilkan
+            cout << i + 1 << ". " << currentNode->noMhs << " " << endl;
+            currentNode = currentNode->next;
+            i++; 
+        }
     }
 
    
@@ -103,5 +111,5 @@ public:
 
 
 int main() {
-  
+    
 }
