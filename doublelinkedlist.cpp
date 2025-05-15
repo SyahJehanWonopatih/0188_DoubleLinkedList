@@ -84,7 +84,8 @@ public:
             if(current->next != NULL)
                 current->next->prev = current->prev;
         }
-       
+        delete current; //menghapus node yang sudah tidak digunakan lagi
+        cout << "\nRecord with roll number " << rollno << " deleted!" << endl;
     }
 
    
