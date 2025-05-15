@@ -88,11 +88,17 @@ public:
         cout << "\nRecord with roll number " << rollno << " deleted!" << endl;
     }
 
+    void traverse() {   //membuat fungsi untuk menampilkan isi dari list
+        
+       
+    }
+
    
+};
 
 
 
 
 int main() {
-
+  
 }
