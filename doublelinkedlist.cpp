@@ -18,5 +18,12 @@ public:
         START = NULL;
     }
 
-   
+    void addnote() {
+        int nim;
+        string nm;
+        cout << "\nEnter the roll number of the student: ";
+        cin >> nim;
+
+
+    }
 };
