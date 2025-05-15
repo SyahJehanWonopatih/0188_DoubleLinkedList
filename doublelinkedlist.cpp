@@ -33,8 +33,11 @@ public:
                 cout << "\nDuplicate number not allowed!" << endl;
                 return;
             }
-         
-        }
-        
-    }
+            newNode->next = START;  //node baru menunjuk ke node pertama
+
+            if (START != NULL)  //jika list tidak kosong maka node pertama menunjuk ke node baru
+                START->prev = newNode;  
+
+       
+   
 };
