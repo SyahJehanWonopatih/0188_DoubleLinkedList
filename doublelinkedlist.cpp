@@ -55,7 +55,11 @@ public:
         current->next = newNode;   
     }
     
-    
+    void hapus() {  //membuat fungsi untuk menghapus Node
+       
+    }
+
+   
 };
 
 
