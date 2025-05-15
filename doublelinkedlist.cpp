@@ -26,7 +26,9 @@ public:
 
         Node *newNode = new Node(); //membuat memori untuk node baru
 
-     
+        newNode->noMhs = nim;   //menyimpan nim ke dalam node baru
+
+    
         
     }
 };
