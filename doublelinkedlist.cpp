@@ -73,11 +73,21 @@ public:
             cout << "Record not found!" << endl;
             return;
         }
+        if(current == START) {      //jika node yang akan dihapus adalah node pertama maka node pertama akan menunjuk ke node kedua 
+            START = current->next;
+            if(START != NULL) 
+                START->prev = NULL;
+        }
+        else {  //jika node yang akan dihapus bukan node pertama maka node sebelumnya akan menunjuk ke node selanjutnya
+            current->prev->next = current->next;
+
+            if(current->next != NULL)
+                current->next->prev = current->prev;
+        }
        
     }
 
-    
-};
+   
 
 
 
