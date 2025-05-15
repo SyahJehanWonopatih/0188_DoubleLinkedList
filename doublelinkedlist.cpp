@@ -124,12 +124,67 @@ public:
         }
     }
 
-    
+    void rearchData() { //membuat fungsi untuk mencari data
+        if(START == NULL) { 
+            cout << "\nList is empty!" << endl;
+            return;
+        }
+
+        int rollno;
+        cout << "\nEnter roll number to search: ";
+        cin >> rollno;
+        Node *current = START;
+
+        while(current != NULL && current->noMhs != rollno) {    
+            current = current->next;
+        }
+
+        
+    }
 };
 
 
 
 
 int main() {
-  
+    DoubleLinkedList list;
+    int choice;
+    do {
+        cout << "\nMenu:\n";
+        cout << "1. Add record\n";
+        cout << "2. Delete record\n";
+        cout << "3. view adcending\n";
+        cout << "4. view decending\n";
+        cout << "5. Search record\n";
+        cout << "6. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case '1':
+                list.addnote();
+                break;
+            case '2':
+                list.hapus();
+                break;
+            case '3':
+                list.traverse();
+                break;
+            case '4':  
+                list.revtraverse();
+                break;
+            case '5':
+                list.rearchData();
+                break;
+            case '6':
+                return 0;
+            default:
+                cout << "\nInvalid option!\n";
+        }
+        cout << "\nPress any key to continue...\n";
+        cin.ignore();
+        cin.get();
+        cout << endl;
+        system("clear");
+    } while (choice != '6');
 }
