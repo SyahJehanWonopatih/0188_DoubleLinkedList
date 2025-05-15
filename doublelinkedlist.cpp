@@ -89,7 +89,10 @@ public:
     }
 
     void traverse() {   //membuat fungsi untuk menampilkan isi dari list
-        
+        if(START == NULL) { //membuat fungsi agar jika list kosong maka tidak bisa ditampilkan
+            cout << "\nList is empty!" << endl;
+            return;
+        }
        
     }
 
