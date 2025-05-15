@@ -153,6 +153,45 @@ public:
 
 
 
-int main() {
-   
+int main() {    //membuat fungsi main agar program dapat berjalan
+    DoubleLinkedList list;
+    int choice;
+    do {
+        cout << "\nMenu:\n";
+        cout << "1. Add record\n";
+        cout << "2. Delete record\n";
+        cout << "3. view adcending\n";
+        cout << "4. view decending\n";
+        cout << "5. Search record\n";
+        cout << "6. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case '1':
+                list.addnote();
+                break;
+            case '2':
+                list.hapus();
+                break;
+            case '3':
+                list.traverse();
+                break;
+            case '4':  
+                list.revtraverse();
+                break;
+            case '5':
+                list.rearchData();
+                break;
+            case '6':
+                return 0;
+            default:
+                cout << "\nInvalid option!\n";
+        }
+        cout << "\nPress any key to continue...\n";
+        cin.ignore();
+        cin.get();
+        cout << endl;
+        system("clear");
+    } while (choice != '6');
 }
