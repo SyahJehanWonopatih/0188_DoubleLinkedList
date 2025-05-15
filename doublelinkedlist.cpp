@@ -64,10 +64,15 @@ public:
         int rollno;
         cin >> rollno;
 
-        
+        Node *current = START;
+
+        while(current != NULL && current->noMhs != rollno) //membuat pointer untuk mencari Node yang akan dihapus
+            current = current->next;
+
+       
     }
 
-   
+  
 };
 
 
