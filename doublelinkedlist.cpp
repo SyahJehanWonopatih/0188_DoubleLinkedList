@@ -28,7 +28,13 @@ public:
 
         newNode->noMhs = nim;   //menyimpan nim ke dalam node baru
 
-    
+        if(START == NULL || nim <= START->noMhs) {  //memasukkan node baru di awal jika list kosong atau nim lebih kecil dari nim di node pertama
+            if (START != NULL && nim == START->noMhs) {
+                cout << "\nDuplicate number not allowed!" << endl;
+                return;
+            }
+         
+        }
         
     }
 };
