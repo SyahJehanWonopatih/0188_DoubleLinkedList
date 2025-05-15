@@ -60,10 +60,14 @@ public:
             cout << "\nList is empty!" << endl;
             return;
         }
+        cout << "\nEnter the roll number of the student whose record to be deleted: "; //meminta nim yang akan dihapus
+        int rollno;
+        cin >> rollno;
+
         
     }
 
-    
+   
 };
 
 
